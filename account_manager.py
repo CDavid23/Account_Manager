@@ -1,3 +1,14 @@
-account? = input("Do you have an account? Y/N")
-if account != Y or N:
-  print("That is not a valid answer.")
+import usernames 
+
+user = input("Username: ")
+
+password = input("Password: ")
+
+if user in usernames.usernames :
+  userspace = usernames.usernames.index(user)
+  if password == usernames.password[userspace] :
+    print("hi", user)
+  else:
+    print("invalid password")
+else:
+  print("invalid username")
